@@ -40,6 +40,7 @@ import {
   DEFAULT_GEMINI_FLASH_MODEL,
 } from './models.js';
 import { ClearcutLogger } from '../telemetry/clearcut-logger/clearcut-logger.js';
+import { PowerShellTool } from '../tools/powershell.js';
 
 export enum ApprovalMode {
   DEFAULT = 'default',
@@ -487,6 +488,7 @@ export function createToolRegistry(config: Config): Promise<ToolRegistry> {
   registerCoreTool(ShellTool, config);
   registerCoreTool(MemoryTool);
   registerCoreTool(WebSearchTool, config);
+  registerCoreTool(PowerShellTool, config);
   return (async () => {
     await registry.discoverTools();
     return registry;
