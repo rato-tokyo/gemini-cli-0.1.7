@@ -181,3 +181,8 @@ Design for a good user experience - Provide clear, minimal, and non-blocking UI 
 ## Comments policy
 
 Only write high-value comments if at all. Avoid talking to the user through comments.
+
+# 追加ルール
+・日本語で応答してください。
+・開発環境はwindows11です。
+・run_shell_commandは使用しないでください。文字化けするためです。代わりにrun_powershell_commandを使用してください。これはpowershellを使うので、文字化けを発生させずにコマンド実行が可能です。万が一文字化けが発生した場合はユーザに報告してください。
